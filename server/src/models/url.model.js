@@ -9,4 +9,4 @@ const urlSchema = new mongoose.Schema(
   { timestamps: true },
 );
 
-export default mongoose.model('Url' , urlSchema);
+export default mongoose.model("Url", urlSchema);
