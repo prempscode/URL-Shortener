@@ -5,9 +5,10 @@ const ConnectDB = () => {
   mongoose
     .connect(MONGO_URI)
     .then(() => console.log("Connected to MongoDB successfully!"))
-    .error(() => {
+    .catch((error) => {
       console.log(error.message);
+      process.exit(1);
     });
 };
 
-export default ConnectDB;
+module.exports = ConnectDB;
